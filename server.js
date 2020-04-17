@@ -7,7 +7,7 @@ const ejs = require('ejs')
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.set('view engine', 'ejs');
-
+app.use(express.static(__dirname + '/public'));
 
 app.get('/',(req,res)=>{
     let randomGenerator = Math.floor(Math.random()*100+1)

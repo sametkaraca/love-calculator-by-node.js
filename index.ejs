@@ -6,15 +6,18 @@
     <script src="server.js"></script>
     <script src="ejs.js"></script>
     <title>Love Calculator</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-<body>
-    <h1>Love Calculator</h1>
-    <br>
-    <form action="/" method="post">
-    <input type="text" name="partner-one" id="partner-1">
-    <input type="text" name="partner-two" id="partner-2">
-    <button type="submit">Calculate</button>
-    <p><%= randomGenerator %></p>
+<body class="text-center">
+    <form action="/" method="post" class="form-signin">
+    <h1 class="h1 mb-5">Love Calculator &hearts;</h1>
+    <input type="text" name="partner-one" class="form-control  mb-3"  placeholder="First Partner" required autofocus>
+    <input type="text" name="partner-two" class="form-control  mb-5"  placeholder="Second Partner" required>
+    <button type="submit" class="btn btn-lg btn-primary btn-block  mb-5" type="submit">Calculate</button>
+    <h1 class=" mb-3"><%= randomGenerator %> % Match! </h1>
 </form>
+
+<footer> <p>&copy; Samet Karaca 2020</p></footer>
 </body>
 </html>
